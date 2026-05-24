@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hover Fade Background</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <style>
+        .fade-bg {
+            width: 100%;
+            min-height: calc(100 * min(var(--vh, 1vh), 1vh));
+            transition: opacity 0.5s ease;
+        }
+        .fade-bg:hover {
+            opacity: 0;
+        }
+    </style>
+
+ </head>
+ <body data-template-id="__page-root" class="m-0 p-0" style="background: rgb(0, 0, 0);">
+  <div data-template-id="bg-panel" class="canva-section fade-bg" style="background: rgb(59, 130, 246);"></div>
+</body></html>
