@@ -1,97 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Floating Particles — HTMLSnip</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floating Particles — HTMLSnip</title>
 
-  <link rel="alternate" type="application/json+oembed"
-    href="https://YOUR_USERNAME.github.io/htmlsnip/oembed/particles.json"
-    title="Floating Particles">
+    <link
+      rel="alternate"
+      type="application/json+oembed"
+      href="https://Made4Uo/gigglegoogle/sampleoembed/particles.json"
+      title="Floating Particles"
+    />
 
-  <meta property="og:title" content="Floating Particles">
-  <meta property="og:description" content="Interactive floating particles built with HTML Canvas. Embed it in Canva for free.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://YOUR_USERNAME.github.io/htmlsnip/p/particles/">
+    <meta property="og:title" content="Floating Particles" />
+    <meta
+      property="og:description"
+      content="Interactive floating particles built with HTML Canvas. Embed it in Canva for free."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://Made4Uo/gigglegoogle/samplep/particles/"
+    />
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #0d0d1a; overflow: hidden; }
-    canvas { display: block; }
-  </style>
-</head>
-<body>
-<canvas id="c"></canvas>
-<script>
-  const canvas = document.getElementById('c');
-  const ctx = canvas.getContext('2d');
-  let W, H, particles = [];
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #0d0d1a;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+    <script>
+      const canvas = document.getElementById("c");
+      const ctx = canvas.getContext("2d");
+      let W,
+        H,
+        particles = [];
 
-  function resize() {
-    W = canvas.width = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-  }
+      function resize() {
+        W = canvas.width = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+      }
 
-  function Particle() {
-    this.x = Math.random() * W;
-    this.y = Math.random() * H;
-    this.r = Math.random() * 2.5 + 0.5;
-    this.vx = (Math.random() - 0.5) * 0.6;
-    this.vy = (Math.random() - 0.5) * 0.6;
-    this.alpha = Math.random() * 0.6 + 0.2;
-    const hues = [200, 220, 260, 280, 300];
-    this.hue = hues[Math.floor(Math.random() * hues.length)];
-  }
+      function Particle() {
+        this.x = Math.random() * W;
+        this.y = Math.random() * H;
+        this.r = Math.random() * 2.5 + 0.5;
+        this.vx = (Math.random() - 0.5) * 0.6;
+        this.vy = (Math.random() - 0.5) * 0.6;
+        this.alpha = Math.random() * 0.6 + 0.2;
+        const hues = [200, 220, 260, 280, 300];
+        this.hue = hues[Math.floor(Math.random() * hues.length)];
+      }
 
-  Particle.prototype.update = function() {
-    this.x += this.vx;
-    this.y += this.vy;
-    if (this.x < 0) this.x = W;
-    if (this.x > W) this.x = 0;
-    if (this.y < 0) this.y = H;
-    if (this.y > H) this.y = 0;
-  };
+      Particle.prototype.update = function () {
+        this.x += this.vx;
+        this.y += this.vy;
+        if (this.x < 0) this.x = W;
+        if (this.x > W) this.x = 0;
+        if (this.y < 0) this.y = H;
+        if (this.y > H) this.y = 0;
+      };
 
-  Particle.prototype.draw = function() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-    ctx.fillStyle = `hsla(${this.hue}, 80%, 70%, ${this.alpha})`;
-    ctx.fill();
-  };
+      Particle.prototype.draw = function () {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+        ctx.fillStyle = `hsla(${this.hue}, 80%, 70%, ${this.alpha})`;
+        ctx.fill();
+      };
 
-  function init() {
-    resize();
-    particles = Array.from({ length: 120 }, () => new Particle());
-  }
+      function init() {
+        resize();
+        particles = Array.from({ length: 120 }, () => new Particle());
+      }
 
-  function drawConnections() {
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 100) {
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(150, 130, 255, ${0.15 * (1 - dist / 100)})`;
-          ctx.lineWidth = 0.5;
-          ctx.stroke();
+      function drawConnections() {
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 100) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = `rgba(150, 130, 255, ${0.15 * (1 - dist / 100)})`;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
         }
       }
-    }
-  }
 
-  function loop() {
-    ctx.clearRect(0, 0, W, H);
-    drawConnections();
-    particles.forEach(p => { p.update(); p.draw(); });
-    requestAnimationFrame(loop);
-  }
+      function loop() {
+        ctx.clearRect(0, 0, W, H);
+        drawConnections();
+        particles.forEach((p) => {
+          p.update();
+          p.draw();
+        });
+        requestAnimationFrame(loop);
+      }
 
-  window.addEventListener('resize', () => { resize(); });
-  init();
-  loop();
-</script>
-</body>
+      window.addEventListener("resize", () => {
+        resize();
+      });
+      init();
+      loop();
+    </script>
+  </body>
 </html>

@@ -3,10 +3,10 @@
   "type": "rich",
   "title": "Countdown Timer",
   "author_name": "HTMLSnip",
-  "author_url": "https://YOUR_USERNAME.github.io/htmlsnip/",
+  "author_url": "https://Made4Uo/gigglegoogle/sample",
   "provider_name": "HTMLSnip",
-  "provider_url": "https://YOUR_USERNAME.github.io/htmlsnip/",
+  "provider_url": "https://Made4Uo/gigglegoogle/sample",
   "width": 800,
   "height": 400,
-  "html": "<iframe src='https://YOUR_USERNAME.github.io/htmlsnip/p/countdown/' width='800' height='400' frameborder='0' scrolling='no' allowfullscreen sandbox='allow-scripts allow-same-origin'></iframe>"
+  "html": "<iframe src='https://Made4Uo/gigglegoogle/samplep/countdown/' width='800' height='400' frameborder='0' scrolling='no' allowfullscreen sandbox='allow-scripts allow-same-origin'></iframe>"
 }

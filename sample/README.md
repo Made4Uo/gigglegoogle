@@ -11,6 +11,7 @@ Free HTML snippet hosting — embeds that work in Canva.
 Find and replace `YOUR_USERNAME` with your actual GitHub username across all files.
 
 Files to update:
+
 - `index.html`
 - `p/countdown/index.html`
 - `p/animated-bg/index.html`
@@ -20,6 +21,7 @@ Files to update:
 - `oembed/particles.json`
 
 Quick way on Mac/Linux:
+
 ```bash
 find . -type f \( -name "*.html" -o -name "*.json" \) \
   -exec sed -i 's/YOUR_USERNAME/youractualusername/g' {} +
@@ -52,13 +54,13 @@ git push -u origin main
 4. Click Save
 
 Wait ~60 seconds. Your site is live at:
-`https://YOUR_USERNAME.github.io/htmlsnip/`
+`https://Made4Uo/gigglegoogle/sample`
 
 ### Step 5 — Test iframely
 
 Go to: https://debug.iframely.com
 
-Paste in: `https://YOUR_USERNAME.github.io/htmlsnip/p/countdown/`
+Paste in: `https://Made4Uo/gigglegoogle/samplep/countdown/`
 
 If it shows an embed preview → you're ready to submit to iframely.
 If it shows "summary card only" → the JSON serving needs a Content-Type fix (see below).
@@ -86,9 +88,9 @@ Once the site is live with real content:
 2. Fill in the form
 3. Select: "I am requesting to add myself as a publisher"
 4. Provide these example URLs:
-   - `https://YOUR_USERNAME.github.io/htmlsnip/p/countdown/`
-   - `https://YOUR_USERNAME.github.io/htmlsnip/p/animated-bg/`
-   - `https://YOUR_USERNAME.github.io/htmlsnip/p/particles/`
+   - `https://Made4Uo/gigglegoogle/samplep/countdown/`
+   - `https://Made4Uo/gigglegoogle/samplep/animated-bg/`
+   - `https://Made4Uo/gigglegoogle/samplep/particles/`
 5. Describe it as: "A free HTML snippet hosting platform. Each snippet is user-generated HTML/CSS/JS with a clean embeddable URL and oEmbed endpoint."
 
 ---
