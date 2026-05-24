@@ -3,34 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Floating Particles — HTMLSnip</title>
-
-    <link
-      rel="alternate"
-      type="application/json+oembed"
-      href="https://made4uo.github.io/gigglegoogle/sample/oembed/particles.json"
-      title="Floating Particles"
-    />
-
-    <meta property="og:title" content="Floating Particles" />
-    <meta
-      property="og:description"
-      content="Interactive floating particles built with HTML Canvas. Embed it in Canva for free."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://made4uo.github.io/gigglegoogle/sample/p/particles/"
-    />
-
-    <meta name="twitter:card" content="player" />
-    <meta
-      name="twitter:player"
-      content="https://made4uo.github.io/gigglegoogle/sample/p/particles/render.html"
-    />
-    <meta name="twitter:player:width" content="800" />
-    <meta name="twitter:player:height" content="400" />
-
     <style>
       * {
         margin: 0;
@@ -120,9 +92,7 @@
         requestAnimationFrame(loop);
       }
 
-      window.addEventListener("resize", () => {
-        resize();
-      });
+      window.addEventListener("resize", resize);
       init();
       loop();
     </script>
