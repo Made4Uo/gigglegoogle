@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "type": "rich",
+  "title": "Countdown Timer",
+  "author_name": "HTMLSnip",
+  "author_url": "https://YOUR_USERNAME.github.io/htmlsnip/",
+  "provider_name": "HTMLSnip",
+  "provider_url": "https://YOUR_USERNAME.github.io/htmlsnip/",
+  "width": 800,
+  "height": 400,
+  "html": "<iframe src='https://YOUR_USERNAME.github.io/htmlsnip/p/countdown/' width='800' height='400' frameborder='0' scrolling='no' allowfullscreen sandbox='allow-scripts allow-same-origin'></iframe>"
+}

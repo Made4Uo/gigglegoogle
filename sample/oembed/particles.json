@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "type": "rich",
+  "title": "Floating Particles",
+  "author_name": "HTMLSnip",
+  "author_url": "https://YOUR_USERNAME.github.io/htmlsnip/",
+  "provider_name": "HTMLSnip",
+  "provider_url": "https://YOUR_USERNAME.github.io/htmlsnip/",
+  "width": 800,
+  "height": 450,
+  "html": "<iframe src='https://YOUR_USERNAME.github.io/htmlsnip/p/particles/' width='800' height='450' frameborder='0' scrolling='no' allowfullscreen sandbox='allow-scripts allow-same-origin'></iframe>"
+}

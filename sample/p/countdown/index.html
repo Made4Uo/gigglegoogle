@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer — HTMLSnip</title>
+
+  <!-- oEmbed discovery tag — this is what iframely reads -->
+  <link rel="alternate" type="application/json+oembed"
+    href="https://YOUR_USERNAME.github.io/htmlsnip/oembed/countdown.json"
+    title="Countdown Timer">
+
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Countdown Timer">
+  <meta property="og:description" content="An animated countdown timer built with HTML/CSS/JS. Embed it in Canva for free.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOUR_USERNAME.github.io/htmlsnip/p/countdown/">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    .wrap { text-align: center; }
+    .label { color: #a0aec0; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; }
+    .timer { display: flex; gap: 1.5rem; justify-content: center; }
+    .unit { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .num {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      width: 90px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: -2px;
+      font-variant-numeric: tabular-nums;
+    }
+    .unit-label { color: #718096; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; }
+    .done { color: #fff; font-size: 1.5rem; font-weight: 600; display: none; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <div class="label">Launching in</div>
+  <div class="timer" id="timer">
+    <div class="unit"><div class="num" id="d">00</div><div class="unit-label">days</div></div>
+    <div class="unit"><div class="num" id="h">00</div><div class="unit-label">hours</div></div>
+    <div class="unit"><div class="num" id="m">00</div><div class="unit-label">mins</div></div>
+    <div class="unit"><div class="num" id="s">00</div><div class="unit-label">secs</div></div>
+  </div>
+  <div class="done" id="done">🎉 We're live!</div>
+</div>
+<script>
+  const target = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000); // 7 days from now
+  const pad = n => String(n).padStart(2, '0');
+  function tick() {
+    const diff = target - Date.now();
+    if (diff <= 0) {
+      document.getElementById('timer').style.display = 'none';
+      document.getElementById('done').style.display = 'block';
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('d').textContent = pad(d);
+    document.getElementById('h').textContent = pad(h);
+    document.getElementById('m').textContent = pad(m);
+    document.getElementById('s').textContent = pad(s);
+  }
+  tick();
+  setInterval(tick, 1000);
+</script>
+</body>
+</html>

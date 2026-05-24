@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTMLSnip — Free HTML Embeds for Canva</title>
+  <meta name="description" content="Free HTML snippet hosting. Paste your HTML, get an embeddable URL that works in Canva.">
+  <meta property="og:title" content="HTMLSnip — Free HTML Embeds for Canva">
+  <meta property="og:description" content="Free HTML snippet hosting. Paste your HTML, get an embeddable URL that works in Canva.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOUR_USERNAME.github.io/htmlsnip/">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f8f6; color: #1a1a1a; }
+    header { background: #fff; border-bottom: 1px solid #e8e8e4; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+    .logo { font-size: 18px; font-weight: 600; letter-spacing: -0.3px; }
+    .logo span { color: #6c63ff; }
+    .badge { background: #f0effe; color: #6c63ff; font-size: 11px; padding: 3px 8px; border-radius: 20px; font-weight: 500; }
+    .hero { text-align: center; padding: 5rem 2rem 3rem; }
+    .hero h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 1rem; }
+    .hero p { font-size: 1.1rem; color: #555; max-width: 480px; margin: 0 auto 2rem; line-height: 1.6; }
+    .cta { display: inline-block; background: #6c63ff; color: #fff; padding: 12px 28px; border-radius: 8px; font-size: 15px; font-weight: 500; text-decoration: none; }
+    .section { max-width: 900px; margin: 0 auto; padding: 2rem; }
+    .section h2 { font-size: 1.1rem; font-weight: 600; margin-bottom: 1.25rem; color: #333; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+    .card { background: #fff; border: 1px solid #e8e8e4; border-radius: 12px; overflow: hidden; text-decoration: none; color: inherit; transition: box-shadow 0.15s; }
+    .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .card-preview { height: 160px; overflow: hidden; position: relative; background: #1a1a2e; }
+    .card-preview iframe { width: 100%; height: 100%; border: none; pointer-events: none; }
+    .card-body { padding: 12px 16px; }
+    .card-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .card-meta { font-size: 12px; color: #888; }
+    .how { background: #fff; border-top: 1px solid #e8e8e4; margin-top: 3rem; padding: 3rem 2rem; }
+    .how-inner { max-width: 700px; margin: 0 auto; }
+    .how h2 { font-size: 1.3rem; font-weight: 600; margin-bottom: 2rem; text-align: center; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .step { text-align: center; }
+    .step-num { width: 36px; height: 36px; background: #f0effe; color: #6c63ff; border-radius: 50%; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem; }
+    .step h3 { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+    .step p { font-size: 13px; color: #666; line-height: 1.5; }
+    footer { text-align: center; padding: 2rem; font-size: 13px; color: #999; }
+    @media (max-width: 600px) { .hero h1 { font-size: 1.8rem; } .steps { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">HTML<span>Snip</span></div>
+  <div class="badge">Free forever</div>
+</header>
+
+<div class="hero">
+  <h1>Embed any HTML into Canva</h1>
+  <p>Paste your HTML/CSS/JS — get a clean URL that works in Canva's embed block. No editor chrome. No paywall.</p>
+  <a href="#snippets" class="cta">Browse snippets</a>
+</div>
+
+<div class="section" id="snippets">
+  <h2>Community snippets</h2>
+  <div class="grid">
+
+    <a class="card" href="p/countdown/">
+      <div class="card-preview">
+        <iframe src="p/countdown/" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Countdown Timer</div>
+        <div class="card-meta">HTML · CSS · JS &nbsp;·&nbsp; by @demo</div>
+      </div>
+    </a>
+
+    <a class="card" href="p/animated-bg/">
+      <div class="card-preview">
+        <iframe src="p/animated-bg/" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Animated Gradient Background</div>
+        <div class="card-meta">CSS animation &nbsp;·&nbsp; by @demo</div>
+      </div>
+    </a>
+
+    <a class="card" href="p/particles/">
+      <div class="card-preview">
+        <iframe src="p/particles/" loading="lazy" scrolling="no" tabindex="-1"></iframe>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Floating Particles</div>
+        <div class="card-meta">Canvas · JS &nbsp;·&nbsp; by @demo</div>
+      </div>
+    </a>
+
+  </div>
+</div>
+
+<div class="how">
+  <div class="how-inner">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Pick or create a snippet</h3>
+        <p>Browse community snippets or publish your own HTML/CSS/JS.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Copy the URL</h3>
+        <p>Each snippet gets a permanent, clean public URL — no editor chrome.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Paste into Canva</h3>
+        <p>Use Canva's embed block → paste the URL → your HTML renders live.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>HTMLSnip — free HTML hosting for Canva embeds</footer>
+
+</body>
+</html>
