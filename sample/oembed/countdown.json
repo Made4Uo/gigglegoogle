@@ -3,9 +3,9 @@
   "type": "rich",
   "title": "Countdown Timer",
   "author_name": "HTMLSnip",
-  "author_url": "https://Made4Uo/gigglegoogle/sample",
+  "author_url": "https://Made4Uo/gigglegoogle/sample/",
   "provider_name": "HTMLSnip",
-  "provider_url": "https://Made4Uo/gigglegoogle/sample",
+  "provider_url": "https://Made4Uo/gigglegoogle/sample/",
   "width": 800,
   "height": 400,
   "html": "<iframe src='https://Made4Uo/gigglegoogle/sample/p/countdown/' width='800' height='400' frameborder='0' scrolling='no' allowfullscreen sandbox='allow-scripts allow-same-origin'></iframe>"
